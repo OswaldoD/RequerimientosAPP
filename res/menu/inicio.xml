@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.requerimientos.login.Inicio" >
+
+    <item 
+        android:id= "@+id/action_search"
+        android:orderInCategory="100"
+        android:icon= "@drawable/search"
+        android:title="@string/search"
+        android:showAsAction="ifRoom"/>
+    
+    <item
+        android:id= "@+id/action_login"
+        android:orderInCategory="110"
+       
+        android:title="@string/login"
+        android:showAsAction="ifRoom"/>
+    
+    <item
+        android:id= "@+id/action_reserv"
+        android:orderInCategory="110"
+       
+        android:title="@string/reserv"
+        android:showAsAction="ifRoom"/>
+    
+    <item
+        android:id= "@+id/action_profile"
+        android:orderInCategory="110"
+       
+        android:title="@string/profile"
+        android:showAsAction="ifRoom"/>
+    
+    <item
+        android:id= "@+id/action_home"
+        android:orderInCategory="110"
+       
+        android:title="@string/home"
+        android:showAsAction="ifRoom"/>
+    
+     <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="120"
+        android:title="@string/exit"
+        app:showAsAction="never"/>
+    
+    
+    
+
+
+</menu>
