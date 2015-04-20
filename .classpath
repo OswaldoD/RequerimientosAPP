@@ -7,5 +7,6 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="lib" path="G:/Programas/Android/SDK/extras/android/support/v4/android-support-v4.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK/google-play-services_lib"/>
+	<classpathentry exported="true" kind="lib" path="G:/Documentos/Workspace - Eclipse/Login/libs/android-async-http-1.4.6.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

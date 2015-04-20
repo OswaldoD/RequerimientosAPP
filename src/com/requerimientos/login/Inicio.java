@@ -9,20 +9,35 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+/*************************/
+import java.util.ArrayList;
+import android.widget.ListView;
+import android.widget.TextView;
+import org.apache.http.Header;
+import org.json.JSONArray;
+
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
 public class Inicio extends ActionBarActivity implements OnClickListener {
 	private ActionBar actionBar ;
+	private ListView listado;
+	private TextView textView;
 
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_inicio);
+		
 		actionBar = getSupportActionBar();
 		actionBar.setDefaultDisplayHomeAsUpEnabled(true);
 		
 //		DISPLAY_SHOW_HOME;
 		actionBar.show();
-		
-		
+	
+		textView = (TextView) findViewById(R.id.textView2);
+		OptDatos();
+	    
 	}
 
 	@Override
@@ -79,6 +94,62 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+	}
+	
+	public void OptDatos(){
+		AsyncHttpClient client = new AsyncHttpClient();
+		String url = "http://192.168.0.102/turuta/main.php";
+		
+		RequestParams parametros = new RequestParams();
+		parametros.put("Edad", 18);
+		
+		client.post(url, parametros, new AsyncHttpResponseHandler(){
+			@Override
+			public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+				// TODO Auto-generated method stub
+				if (statusCode == 200){
+					// llamar a funcion...
+					cargaLista(obtDatosJSON(new String (responseBody)));
+				}
+			}
+			
+			@Override
+			public void onFailure(int statusCode, Header[] headers, byte[] responseBody,
+					Throwable error) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		
 		
 	}
+	public void cargaLista(ArrayList<String> datos){
+		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datos);
+		//listado.setAdapter(adapter);
+		textView.setText(datos.get(0));
+		
+		
+	}
+	
+	public ArrayList<String> obtDatosJSON (String response){
+		ArrayList<String> listado = new ArrayList<String>();
+		
+		try{
+			JSONArray jsonArray = new JSONArray(response);
+			String texto;
+			for(int i=0; i<jsonArray.length(); i++){
+				texto = jsonArray.getJSONObject(i).getString("Nombre") + " " +
+						jsonArray.getJSONObject(i).getString("Apellido") + " " +
+						jsonArray.getJSONObject(i).getString("Edad")+ " ";
+				listado.add(texto);
+			}
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+		return listado;
+	}
+	
+	
 }
