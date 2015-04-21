@@ -2,6 +2,7 @@ package com.requerimientos.login;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -9,12 +10,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+
+
 /*************************/
 import java.util.ArrayList;
+
 import android.widget.ListView;
 import android.widget.TextView;
+
 import org.apache.http.Header;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -62,7 +68,9 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 				return true;
 			case R.id.action_login:
 				// abrir el menu de login
-				return true;
+				startActivity(new Intent(this, Login.class));
+
+				//return true;
 			case R.id.action_reserv:
 				// menu de reservación
 				return true;
@@ -101,14 +109,13 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		String url = "http://192.168.0.102/turuta/main.php";
 		
 		RequestParams parametros = new RequestParams();
-		parametros.put("Edad", 18);
+		parametros.put("Email", "dreammicro7@gmail.com");
 		
 		client.post(url, parametros, new AsyncHttpResponseHandler(){
 			@Override
 			public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 				// TODO Auto-generated method stub
 				if (statusCode == 200){
-					// llamar a funcion...
 					cargaLista(obtDatosJSON(new String (responseBody)));
 				}
 			}
@@ -117,6 +124,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 			public void onFailure(int statusCode, Header[] headers, byte[] responseBody,
 					Throwable error) {
 				// TODO Auto-generated method stub
+				error.printStackTrace();
 				
 			}
 			
@@ -132,7 +140,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		
 		
 	}
-	
+	/*
 	public ArrayList<String> obtDatosJSON (String response){
 		ArrayList<String> listado = new ArrayList<String>();
 		
@@ -140,9 +148,37 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 			JSONArray jsonArray = new JSONArray(response);
 			String texto;
 			for(int i=0; i<jsonArray.length(); i++){
+				
+				texto = jsonArray.getJSONArray(i).getString(i) + " ";
+						//jsonArray.getJSONArray(index)
+						//jsonArray.getJSONArray(i).getString("correo") + " " +
+						//jsonArray.getJSONArray(i).getString("id")+ " ";
+				listado.add(texto);
+				
 				texto = jsonArray.getJSONObject(i).getString("Nombre") + " " +
-						jsonArray.getJSONObject(i).getString("Apellido") + " " +
-						jsonArray.getJSONObject(i).getString("Edad")+ " ";
+						jsonArray.getJSONObject(i).getString("correo") + " " +
+						jsonArray.getJSONObject(i).getString("id")+ " ";
+				listado.add(texto);
+			}
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+		return listado;
+	}*/
+	
+	public ArrayList<String> obtDatosJSON (String response){
+		ArrayList<String> listado = new ArrayList<String>();
+		
+		try{
+			JSONObject jsonArray = new JSONObject(response);
+			String texto;
+			for(int i=0; i<jsonArray.length(); i++){
+				
+				
+				
+				texto = jsonArray.getString("Nombre") + " " +
+						jsonArray.getString("correo") + " " +
+						jsonArray.getString("id")+ " ";
 				listado.add(texto);
 			}
 		} catch(Exception e){
@@ -150,6 +186,5 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		}
 		return listado;
 	}
-	
 	
 }
