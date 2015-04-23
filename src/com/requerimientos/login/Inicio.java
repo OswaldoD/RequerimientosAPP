@@ -42,7 +42,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		actionBar.show();
 	
 		textView = (TextView) findViewById(R.id.textView2);
-		OptDatos();
+	//	OptDatos();
 	    
 	}
 
@@ -66,8 +66,8 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 			case R.id.action_search:
 				// abrir el menu de busqueda
 				//startActivity(new Intent(this, Buscar_Destino.class));
-				//startActivity(new Intent(this, Destinos_Encontrados.class));
-				startActivity(new Intent(this, Mostrar_Destino.class));
+				startActivity(new Intent(this, Destinos_Encontrados.class));
+				//startActivity(new Intent(this, Mostrar_Destino.class));
 
 				return true;
 			case R.id.action_login:
@@ -77,10 +77,10 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 			case R.id.action_reserv:
 				// menu de reservación
 				//startActivity(new Intent(this, Reservar.class)); // en realidad llama a ver reservaciones
+				//startActivity(new Intent(this, Reservar_Detalles.class));
 				//startActivity(new Intent(this, Ver_Reservacion.class));
 				//startActivity(new Intent(this, Ver_Reservaciones.class));
-				startActivity(new Intent(this, Reservar_Detalles.class));
-
+				
 				return true;
 			case R.id.action_profile:
 				// menu de perfil
