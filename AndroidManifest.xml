@@ -3,9 +3,9 @@
     package="com.requerimientos.login"
     android:versionCode="1"
     android:versionName="1.0" >
-	
+
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="21" />
 
     <!-- So that we can get the account name -->
@@ -30,7 +30,6 @@
             android:name=".Login"
             android:label="@string/app_name" >
             <intent-filter>
-                
             </intent-filter>
         </activity>
         <activity
@@ -41,6 +40,34 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Buscar_Destino"
+            android:label="@string/title_activity_buscar__destino" >
+        </activity>
+        <activity
+            android:name=".Reservar"
+            android:label="@string/title_activity_reservar" >
+        </activity>
+        <activity
+            android:name=".Ver_Reservacion"
+            android:label="@string/title_activity_ver__reservacion" >
+        </activity>
+        <activity
+            android:name=".Destinos_Encontrados"
+            android:label="@string/title_activity_destinos__encontrados" >
+        </activity>
+        <activity
+            android:name=".Mostrar_Destino"
+            android:label="@string/title_activity_mostrar__destino" >
+        </activity>
+        <activity
+            android:name=".Ver_Reservaciones"
+            android:label="@string/title_activity_ver__reservaciones" >
+        </activity>
+        <activity
+            android:name=".Reservar_Detalles"
+            android:label="@string/title_activity_reservar__detalles" >
         </activity>
     </application>
 

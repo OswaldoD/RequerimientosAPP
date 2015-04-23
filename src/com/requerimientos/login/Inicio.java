@@ -65,20 +65,29 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		switch (item.getItemId()){
 			case R.id.action_search:
 				// abrir el menu de busqueda
+				//startActivity(new Intent(this, Buscar_Destino.class));
+				//startActivity(new Intent(this, Destinos_Encontrados.class));
+				startActivity(new Intent(this, Mostrar_Destino.class));
+
 				return true;
 			case R.id.action_login:
 				// abrir el menu de login
 				startActivity(new Intent(this, Login.class));
-
-				//return true;
+				return true;
 			case R.id.action_reserv:
 				// menu de reservación
+				//startActivity(new Intent(this, Reservar.class)); // en realidad llama a ver reservaciones
+				//startActivity(new Intent(this, Ver_Reservacion.class));
+				//startActivity(new Intent(this, Ver_Reservaciones.class));
+				startActivity(new Intent(this, Reservar_Detalles.class));
+
 				return true;
 			case R.id.action_profile:
 				// menu de perfil
 				return true;
 			case R.id.action_home:
 				// menu de inicio
+				//startActivity(new Intent(this, Inicio.class)); en las demas pestañas si se llama esta actividad
 				return true;
 			case R.id.action_exit:
 				finish();

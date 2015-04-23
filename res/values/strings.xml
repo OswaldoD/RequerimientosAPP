@@ -17,16 +17,64 @@
     <string name="revoke_access_status">Revoked access.</string>
     <string name="revoke_access_error_status">Unable to revoke access.</string>
     <string name="title_activity_inicio">Inicio</string>
-    
+
     <!-- Strings para pantalla inicio -->
     <string name="populares">Destinos Populares</string>
-    
+
     <!-- Strings para Activity Bar -->
-    <string name="search">Search</string>
+    <string name="search">Buscar</string>
     <string name="login">Inicar Sesión</string>
     <string name="profile">Perfil</string>
     <string name="reserv">Ver Reservaciones</string>
     <string name="home">Inicio</string>
     <string name="exit">Salir</string>
+    <string name="title_activity_buscar__destino">Buscar Destino</string>
+
+    <!-- Strings para pantalla de búsqueda -->
+    <string name="busqueda_destinos">Búsqueda de Destinos</string>
+    <string name="nombre_clave">Nombre Clave</string>
+    <string name="tipo_destino">Tipo</string>
+    <string name="ofertas">Ofertas</string>
+    <string name="normal">Normal</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="ubicacion_dentro">Dentro de Costa Rica</string>
+    <string name="ubicacion_fuera">Fuera de Costa Rica</string>
+    <string name="buscar_destino">Buscar</string>
+
+    <!-- Strings para pantalla reservar -->
+    <string name="title_activity_reservar">Reservar</string>
+    <string name="title_reservar">"Reservación de Destino"</string>
+    <string name="cantidad_personas">Cantidad de Personas</string>
+    <string name="fecha">Fecha de Partida</string>
+    <string name="formato_fecha">Dia/Mes/Año</string>
+    <string name="precio">Precio</string>
+    <string name="regresar">Regresar</string>
+    <string name="continuar">Continuar</string>
+
+    <!-- Strings para pantalla Ver Reservacion -->
+    <string name="title_activity_ver__reservacion">Ver Reservacion</string>
+    <string name="fecha_salida">Fecha de Salida</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- Strings para pantalla Destinos Encontrados -->
+    <string name="title_activity_destinos__encontrados">Destinos Encontrados</string>
+    <string name="title_destinos">Coincidencias Encontradas</string>
+
+    <!-- Strings para pantalla Mostrar Destino -->
+    <string name="title_activity_mostrar__destino">Mostrar Destino</string>
+    <string name="hora_checkin">Hora del Check-In</string>
+    <string name="precio_destino">Precio por persona</string>
+    <string name="oferta">Oferta</string>
+    <string name="v_itinerarios">Ver Itinerarios</string>
+
+    <!-- Strings para pantalla Ver Reservaciones -->
+    <string name="title_activity_ver__reservaciones">Ver Reservaciones</string>
+    <string name="activas">Reservaciones Activas</string>
+    <string name="canceladas">Reservaciones Canceladas</string>
+    
+    <!-- Strings para pantalla Detalles de Reservación -->
+    <string name="title_activity_reservar__detalles">Detalles de Reservar</string>
+    <string name="hospedaje">Lugar de Hospedaje</string>
+    <string name="habitacion">Detalles de la Habitación</string>
 
 </resources>
