@@ -12,9 +12,11 @@ import android.view.View.OnClickListener;
 
 
 
+
 /*************************/
 import java.util.ArrayList;
 
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -28,8 +30,13 @@ import com.loopj.android.http.RequestParams;
 
 public class Inicio extends ActionBarActivity implements OnClickListener {
 	private ActionBar actionBar ;
-	private ListView listado;
-	private TextView textView;
+	//private ListView listado;
+	private TextView txtDest1; 
+	private TextView txtDest2;
+	private TextView txtDest3;
+	private TextView txtDest4;
+	private TextView txtDest5;
+	private String webservice = "http://192.168.0.102/turuta/main.php";
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,11 +44,31 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		
 		actionBar = getSupportActionBar();
 		actionBar.setDefaultDisplayHomeAsUpEnabled(true);
-		
-//		DISPLAY_SHOW_HOME;
 		actionBar.show();
 	
-		textView = (TextView) findViewById(R.id.textView2);
+		txtDest1 = (TextView) findViewById(R.id.txtDest1);
+		txtDest2 = (TextView) findViewById(R.id.txtDest2);
+		txtDest3 = (TextView) findViewById(R.id.txtDest3);
+		txtDest4 = (TextView) findViewById(R.id.txtDest4);
+		txtDest5 = (TextView) findViewById(R.id.txtDest5);
+		
+		/* Declaración de botones */
+		Button btndest1 = (Button) findViewById(R.id.btnDest1);
+		btndest1.setOnClickListener(this);
+		
+		Button btndest2 = (Button) findViewById(R.id.btnDest2);
+		btndest2.setOnClickListener(this);
+		
+		Button btndest3 = (Button) findViewById(R.id.btnDest3);
+		btndest3.setOnClickListener(this);
+		
+		Button btndest4 = (Button) findViewById(R.id.btnDest4);
+		btndest4.setOnClickListener(this);
+		
+		Button btndest5 = (Button) findViewById(R.id.btnDest5);
+		btndest5.setOnClickListener(this);
+		
+		
 	//	OptDatos();
 	    
 	}
@@ -52,8 +79,6 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.inicio, menu);
 		return super.onCreateOptionsMenu(menu);
-		//getMenuInflater().inflate(R.menu.inicio, menu);
-		//return true;
 	}
 
 	@Override
@@ -65,8 +90,8 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		switch (item.getItemId()){
 			case R.id.action_search:
 				// abrir el menu de busqueda
-				//startActivity(new Intent(this, Buscar_Destino.class));
-				startActivity(new Intent(this, Destinos_Encontrados.class));
+				startActivity(new Intent(this, Buscar_Destino.class));
+				//startActivity(new Intent(this, Destinos_Encontrados.class));
 				//startActivity(new Intent(this, Mostrar_Destino.class));
 
 				return true;
@@ -79,7 +104,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 				//startActivity(new Intent(this, Reservar.class)); // en realidad llama a ver reservaciones
 				//startActivity(new Intent(this, Reservar_Detalles.class));
 				//startActivity(new Intent(this, Ver_Reservacion.class));
-				//startActivity(new Intent(this, Ver_Reservaciones.class));
+				startActivity(new Intent(this, Ver_Reservaciones.class));
 				
 				return true;
 			case R.id.action_profile:
@@ -98,19 +123,32 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		
 		
 		}
-		/*
-		if (id == R.id.action_settings) {
-			actionBar.hide();
-			return true;
-		}
-
-		return super.onOptionsItemSelected(item);
-		*/
 	}
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		switch(v.getId()){
+			case R.id.btnDest1:
+				System.out.println("btn1");
+				break;
+			case R.id.btnDest2:
+				System.out.println("btn2");
+				break;
+			case R.id.btnDest3:
+				System.out.println("btn3");
+				break;
+			case R.id.btnDest4:
+				System.out.println("btn4");
+				break;
+			case R.id.btnDest5:
+				System.out.println("btn5");
+				break;
+			default:
+				System.out.println("other");
+				break;
+		
+		}
 	}
 	
 	public void OptDatos(){
@@ -145,7 +183,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 	public void cargaLista(ArrayList<String> datos){
 		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datos);
 		//listado.setAdapter(adapter);
-		textView.setText(datos.get(0));
+		txtDest1.setText(datos.get(0));
 		
 		
 	}

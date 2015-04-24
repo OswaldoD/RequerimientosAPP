@@ -9,7 +9,7 @@
     tools:context="com.requerimientos.login.Ver_Reservaciones" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtReservacionesActivas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,35 +19,35 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txtActiva1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/txtReservacionesActivas"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="28dp"
         android:text="Reservación 1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtActiva2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/txtActiva1"
+        android:layout_below="@+id/txtActiva1"
         android:layout_marginTop="40dp"
         android:text="Reservación 2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtActiva3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/txtActiva2"
+        android:layout_below="@+id/txtActiva2"
         android:layout_marginTop="41dp"
         android:text="Reservacion 3" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtReservacionesCanceladas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -56,90 +56,90 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtCancelada1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/txtActiva3"
+        android:layout_below="@+id/txtReservacionesCanceladas"
         android:layout_marginTop="38dp"
         android:text="Reservación 1" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txtCancelada2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/txtCancelada1"
+        android:layout_below="@+id/txtCancelada1"
         android:layout_marginTop="33dp"
         android:text="Reservación 2" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtCancelada3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView7"
-        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/txtCancelada2"
+        android:layout_below="@+id/txtCancelada2"
         android:layout_marginTop="31dp"
         android:text="Reservación 3" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnActiva1"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignRight="@+id/textView5"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtActiva1"
+        android:layout_alignBottom="@+id/txtActiva1"
+        android:layout_alignRight="@+id/txtReservacionesCanceladas"
+        android:background="@drawable/ic_action_forward" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnActiva2"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignLeft="@+id/button1"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtActiva2"
+        android:layout_alignBottom="@+id/txtActiva2"
+        android:layout_alignLeft="@+id/btnActiva1"
+        android:background="@drawable/ic_action_forward" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnActiva3"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignRight="@+id/button2"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtActiva3"
+        android:layout_alignBottom="@+id/txtActiva3"
+        android:layout_alignRight="@+id/btnActiva2"
+        android:background="@drawable/ic_action_forward" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCancela1"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView6"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/button3"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCancelada1"
+        android:layout_alignBottom="@+id/txtCancelada1"
+        android:layout_alignLeft="@+id/btnActiva3"
+        android:background="@drawable/ic_action_forward" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnCancela2"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView7"
-        android:layout_alignBottom="@+id/textView7"
-        android:layout_alignRight="@+id/button4"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCancelada2"
+        android:layout_alignBottom="@+id/txtCancelada2"
+        android:layout_alignRight="@+id/btnCancela1"
+        android:background="@drawable/ic_action_forward" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnCancela3"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView8"
-        android:layout_alignBottom="@+id/textView8"
-        android:layout_alignLeft="@+id/button5"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCancelada3"
+        android:layout_alignBottom="@+id/txtCancelada3"
+        android:layout_alignLeft="@+id/btnCancela2"
+        android:background="@drawable/ic_action_forward" />
 
 </RelativeLayout>

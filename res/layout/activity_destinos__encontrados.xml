@@ -9,7 +9,7 @@
     tools:context="com.requerimientos.login.Destinos_Encontrados" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtCoincident"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,102 +19,102 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txtCoinc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/txtCoincident"
+        android:layout_below="@+id/txtCoinc1"
         android:layout_marginTop="60dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtCoinc3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignLeft="@+id/txtCoinc2"
         android:layout_centerVertical="true"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtCoinc4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/txtCoinc3"
+        android:layout_below="@+id/txtCoinc3"
         android:layout_marginTop="39dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnCoinc2"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_marginRight="20dp"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCoinc2"
+        android:layout_alignBottom="@+id/txtCoinc2"
+        android:layout_alignRight="@+id/btnCoinc1"
+        android:background="@drawable/ic_action_forward"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCoinc3"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignRight="@+id/button1"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCoinc3"
+        android:layout_alignBottom="@+id/txtCoinc3"
+        android:layout_alignLeft="@+id/btnCoinc2"
+        android:background="@drawable/ic_action_forward"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCoinc4"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignLeft="@+id/button2"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCoinc4"
+        android:layout_alignBottom="@+id/txtCoinc4"
+        android:layout_alignLeft="@+id/btnCoinc3"
+        android:background="@drawable/ic_action_forward"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCoinc5"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView5"
-        android:layout_alignBottom="@+id/textView5"
-        android:layout_alignLeft="@+id/button3"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button5"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView6"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/button4"
-        android:text="Button" />
+        android:layout_alignBaseline="@+id/txtCoinc5"
+        android:layout_alignBottom="@+id/txtCoinc5"
+        android:layout_alignLeft="@+id/btnCoinc4"
+        android:background="@drawable/ic_action_forward"/>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtCoinc5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_below="@+id/button4"
+        android:layout_alignLeft="@+id/txtCoinc4"
+        android:layout_below="@+id/btnCoinc4"
         android:layout_marginTop="46dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/btnCoinc1"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button3"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_marginBottom="05dp"
+        android:layout_alignBaseline="@+id/txtCoinc1"
+        android:layout_alignBottom="@+id/txtCoinc1"
+        android:layout_alignRight="@+id/txtCoincident"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/ic_action_forward" />
+
+    <TextView
+        android:id="@+id/txtCoinc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCoinc1"
+        android:layout_below="@+id/btnCoinc1"
+        android:layout_marginTop="54dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

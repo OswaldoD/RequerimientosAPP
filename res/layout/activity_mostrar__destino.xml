@@ -9,7 +9,7 @@
     tools:context="com.requerimientos.login.Mostrar_Destino" >
 <!--  Temo que los graficos se caigan -->
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txtNombreDestino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,104 +19,103 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/txtNombreDestino"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:src="@drawable/search" />
+        android:src="@drawable/ic_action_camera" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtLugarHospedaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/txtHoraCheckin"
+        android:layout_below="@+id/txtHoraCheckin"
         android:layout_marginTop="22dp"
         android:text="Lugar de Hospedaje"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtPrecioPersona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/txtLugarHospedaje"
+        android:layout_below="@+id/txtLugarHospedaje"
         android:layout_marginTop="30dp"
         android:text="@string/precio_destino"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtOferta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/txtPrecioPersona"
+        android:layout_below="@+id/txtPrecioPersona"
         android:layout_marginTop="21dp"
         android:text="@string/oferta"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnRegresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView8"
-        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/txtOferta"
+        android:layout_below="@+id/txtOferta"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/regresar" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnReservar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/textView6"
+        android:layout_alignBaseline="@+id/btnRegresar"
+        android:layout_alignBottom="@+id/btnRegresar"
+        android:layout_toRightOf="@+id/txtPrecioPersona"
         android:text="@string/title_activity_reservar" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtDetallesH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/imageFoto"
         android:layout_marginTop="28dp"
-        android:layout_toRightOf="@+id/textView8"
+        android:layout_toRightOf="@+id/txtOferta"
         android:text="Detalles de la habitación" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txtMostarPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView8"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_above="@+id/txtOferta"
+        android:layout_alignRight="@+id/txtNombreDestino"
         android:text="$100" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtMostarHora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/textView2"
+        android:layout_toRightOf="@+id/txtDetallesH"
         android:text="8:00pm"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/txtMostarOferta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView8"
-        android:layout_alignBottom="@+id/textView8"
-        android:layout_alignRight="@+id/textView4"
+        android:layout_alignBaseline="@+id/txtOferta"
+        android:layout_alignBottom="@+id/txtOferta"
+        android:layout_alignRight="@+id/txtMostarHora"
         android:text="(si aplica)" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtHoraCheckin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView4"
-        android:layout_toLeftOf="@+id/imageView1"
+        android:layout_above="@+id/txtMostarHora"
         android:text="@string/hora_checkin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 

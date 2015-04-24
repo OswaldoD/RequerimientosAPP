@@ -9,7 +9,7 @@
     tools:context="com.requerimientos.login.Ver_Reservacion" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtNombreReservacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,73 +19,81 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txtCoinc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/txtNombreReservacion"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="43dp"
         android:text="Cantidad de Personas"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtCoinc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/txtCoinc1"
+        android:layout_below="@+id/txtCoinc1"
         android:layout_marginTop="65dp"
         android:text="@string/fecha_salida"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtFechaSalida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/txtCoinc2"
+        android:layout_below="@+id/txtCoinc2"
         android:layout_marginTop="25dp"
         android:text="00/00/0000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtPrecioR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_below="@+id/textView5"
+        android:layout_alignRight="@+id/txtFechaSalida"
+        android:layout_below="@+id/txtCoinc4"
         android:layout_marginTop="15dp"
         android:text="$00"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtCoinc4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/txtCoinc2"
+        android:layout_below="@+id/txtFechaSalida"
         android:layout_marginTop="39dp"
         android:text="@string/precio"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnRegresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/txtCoinc4"
+        android:layout_below="@+id/txtPrecioR"
         android:layout_marginTop="21dp"
         android:text="@string/regresar" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/txtCantPersonasR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_marginLeft="18dp"
-        android:layout_toRightOf="@+id/textView6"
+        android:layout_below="@+id/txtCoinc1"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/txtCoinc4"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnCancelarReservacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnRegresar"
+        android:layout_toRightOf="@+id/txtPrecioR"
         android:text="@string/cancelar" />
 
 </RelativeLayout>

@@ -40,6 +40,7 @@
     <string name="ubicacion_dentro">Dentro de Costa Rica</string>
     <string name="ubicacion_fuera">Fuera de Costa Rica</string>
     <string name="buscar_destino">Buscar</string>
+    <string name="paquetes">Paquetes</string>
 
     <!-- Strings para pantalla reservar -->
     <string name="title_activity_reservar">Reservar</string>
@@ -54,7 +55,7 @@
     <!-- Strings para pantalla Ver Reservacion -->
     <string name="title_activity_ver__reservacion">Ver Reservacion</string>
     <string name="fecha_salida">Fecha de Salida</string>
-    <string name="cancelar">Cancelar</string>
+    <string name="cancelar">Cancelar Reservación</string>
 
     <!-- Strings para pantalla Destinos Encontrados -->
     <string name="title_activity_destinos__encontrados">Destinos Encontrados</string>

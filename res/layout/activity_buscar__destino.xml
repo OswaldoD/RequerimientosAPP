@@ -9,7 +9,7 @@
     tools:context="com.requerimientos.login.Buscar_Destino" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtCoincidencias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,83 +19,98 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/txtCoinc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/txtCoincidencias"
+        android:layout_below="@+id/txtCoincidencias"
         android:layout_marginTop="23dp"
         android:text="@string/nombre_clave"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/inputNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/txtCoinc1"
+        android:layout_below="@+id/txtCoinc1"
         android:ems="10" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtCoinc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/inputNombre"
+        android:layout_below="@+id/inputNombre"
         android:layout_marginTop="17dp"
         android:text="@string/tipo_destino"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/radioNormal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/radioButton1"
-        android:layout_alignBottom="@+id/radioButton1"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="@string/normal" />
+        android:layout_alignBaseline="@+id/radioOfertas"
+        android:layout_alignBottom="@+id/radioOfertas"
+        android:layout_toRightOf="@+id/txtCoinc1"
+        android:text="@string/normal" 
+        android:onClick="onRadioButtonClicked"/>
 
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/radioOfertas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/txtCoinc2"
+        android:layout_below="@+id/txtCoinc2"
         android:layout_marginTop="29dp"
-        android:text="@string/ofertas" />
+        android:text="@string/ofertas" 
+        android:onClick="onRadioButtonClicked"/>
 
     <RadioButton
-        android:id="@+id/radioButton4"
+        android:id="@+id/radioFuera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioButton3"
-        android:layout_below="@+id/radioButton3"
-        android:text="@string/ubicacion_fuera" />
+        android:layout_alignLeft="@+id/radioDentro"
+        android:layout_below="@+id/radioDentro"
+        android:text="@string/ubicacion_fuera" 
+        android:onClick="onRadioButtonClicked"/>
 
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/radioDentro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_toRightOf="@+id/textView3"
-        android:text="@string/ubicacion_dentro" />
+        android:layout_below="@+id/txtCoinc3"
+        android:layout_toRightOf="@+id/txtCoinc2"
+        android:text="@string/ubicacion_dentro" 
+        android:onClick="onRadioButtonClicked"/>
+    
+    <RadioButton
+        android:id="@+id/radioPaquete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioOfertas"
+        android:layout_below="@+id/radioNormal"
+        android:text="@string/paquetes" 
+        android:onClick="onRadioButtonClicked"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtCoinc3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioButton1"
-        android:layout_below="@+id/radioButton1"
+        android:layout_alignLeft="@+id/radioOfertas"
+        android:layout_below="@+id/radioOfertas"
         android:layout_marginTop="37dp"
         android:text="@string/ubicacion"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnCoinc1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/radioButton4"
+        android:layout_alignRight="@+id/txtCoincidencias"
+        android:layout_below="@+id/radioFuera"
         android:text="@string/buscar_destino" />
+
+ 
 
 </RelativeLayout>
