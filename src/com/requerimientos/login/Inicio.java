@@ -36,7 +36,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 	private TextView txtDest3;
 	private TextView txtDest4;
 	private TextView txtDest5;
-	private String webservice = "http://192.168.0.102/turuta/main.php";
+	private String webservice = "http://192.168.0.102/turuta/buscar.php";
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,6 +51,8 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		txtDest3 = (TextView) findViewById(R.id.txtDest3);
 		txtDest4 = (TextView) findViewById(R.id.txtDest4);
 		txtDest5 = (TextView) findViewById(R.id.txtDest5);
+		
+		txtDest1.setOnClickListener(this);
 		
 		/* Declaración de botones */
 		Button btndest1 = (Button) findViewById(R.id.btnDest1);
@@ -69,7 +71,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		btndest5.setOnClickListener(this);
 		
 		
-	//	OptDatos();
+		OptDatos();
 	    
 	}
 
@@ -129,7 +131,7 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()){
-			case R.id.btnDest1:
+			case R.id.txtDest1:
 				System.out.println("btn1");
 				break;
 			case R.id.btnDest2:
@@ -156,9 +158,14 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 		String url = "http://192.168.0.102/turuta/main.php";
 		
 		RequestParams parametros = new RequestParams();
-		parametros.put("Email", "dreammicro7@gmail.com");
+		parametros.put("dst", "manuel");
+		parametros.put("pqt", "fun");
+		parametros.put("tbsq", 0);
+		parametros.put("lgr", 0);
+
 		
-		client.post(url, parametros, new AsyncHttpResponseHandler(){
+		
+		client.post(webservice, parametros, new AsyncHttpResponseHandler(){
 			@Override
 			public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 				// TODO Auto-generated method stub
@@ -223,9 +230,9 @@ public class Inicio extends ActionBarActivity implements OnClickListener {
 				
 				
 				
-				texto = jsonArray.getString("Nombre") + " " +
-						jsonArray.getString("correo") + " " +
-						jsonArray.getString("id")+ " ";
+				texto = jsonArray.getString("Nombre") + " " ;//+
+						//jsonArray.getString("correo") + " " +
+						//jsonArray.getString("id")+ " ";
 				listado.add(texto);
 			}
 		} catch(Exception e){
