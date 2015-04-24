@@ -1,5 +1,13 @@
 package com.requerimientos.login;
-
+/**
+ * Instituto Tecnológico de Costa Rica
+ * Requerimientos de Software
+ * Tarea 4 - Inicio de Sesión con Google
+ * Integrantes: Oswaldo Dávila
+ * 			    Luis Quiros
+ * 
+ *
+ * */
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;

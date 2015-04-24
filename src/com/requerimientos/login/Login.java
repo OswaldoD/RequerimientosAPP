@@ -4,7 +4,6 @@
  * Tarea 4 - Inicio de Sesión con Google
  * Integrantes: Oswaldo Dávila
  * 			    Luis Quiros
- * 				Kevin Bejarano
  * 
  * Para más sobre este tipo de conexión, se pueden consultar los
  * ejemplos de PlusSampleActivity que provee la API de Google
